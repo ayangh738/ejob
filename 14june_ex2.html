@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <script>
+            function validate()
+            { 
+                event.preventDefault();
+                let arr=document.test.job.options;
+                let c=0;
+                let result="";
+                for(let j=0;j<arr.length;j++)
+                {
+                    if(arr[j].selected==true)
+                    {
+                        c++;
+                        result=result+arr[j].value+" ";
+                    }
+                }
+                if(c==0)
+                {
+                    alert("Please select at least one job role");
+                    return false;
+                }
+                else
+                {
+                    document.getElementById("head3").innerHTML=result;
+                    return true;
+                }
+            }
+        </script>
+        <form name="test" onsubmit="return validate()">
+            Select job role:
+            <select name="job" multiple>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+                <option value="analyst">Analyst</option>
+                <option value="tester">Tester</option>
+                <option value="architect">Architect</option>
+            </select>
+            <br>
+            <input type="submit" value="check"/>
+        </form>
+        <br>
+        <h3 id="head3"></h3>
+    </body>
+</html>

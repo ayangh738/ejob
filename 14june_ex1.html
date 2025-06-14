@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <script>
+            function validate()
+            {
+                event.preventDefault();
+                let arr=document.test.lang;
+                let result="";
+                let c=0;
+                for(let j=0;j<arr.length;j++)
+            {
+                if(arr[j].checked==true)
+            {
+                c++;
+                result=result+arr[j].value+" ";
+            }
+        }
+            if(c==0)
+           
+        {
+            alert("Please select at least one language");
+            return false;
+        }
+        else
+        {
+            document.getElementById("head3").innerHTML=result;
+            return true;
+        }
+            
+        }
+        </script>
+        <form name="test" onsubmit="return validate()">
+            select language speak:
+            <input type="checkbox" name="lang" value="english"/>english
+            <input type="checkbox" name="lang" value="french"/>french
+            <input type="checkbox" name="lang" value="spanish"/>spanish
+            <input type="checkbox" name="lang" value="german"/>german
+            <input type="checkbox" name="lang" value="italian"/>italian
+            <input type="checkbox" name="lang" value="japanese"/>japanese
+            <br>
+            <input type="submit" value="check"/>
+        </form>
+        <br>
+        <h3 id="head3"></h3>
+    </body>
+</html>

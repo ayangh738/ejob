@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var arr=[];
+            for (let i=0;i<10;i++)
+        {
+            arr[i]=parseInt(window.prompt(`enter value ${i}`));
+        }
+        var sum=0;
+        for(let j=0;j<arr.length;j++)
+        {if(j%2==0)
+        {sum=sum+arr[j];
+
+        }
+        }
+        document.write(`sum of even index elements is: ${sum} <br>`);
+        </script>
+    </body>
+</html>

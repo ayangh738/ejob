@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            function disp()
+            {
+                let name= document.test.nm.value;
+                let loc=document.test.loc.value;
+                let ag=document.test.age.value;
+               document.getElementById("demo").innerHTML="name: "+name+"\nlocation: "+loc+"\nage : "+ag;
+            }
+
+        </script>
+        <h3>registration form</h3>
+        <form name="test">
+            enter name: <input type="text" name="nm"/>
+            <br>
+            enter location:<input type="text" name="loc"/>
+            <br>
+            enter age:<input type="text" name="age"/>
+            <br>
+            <button type="button" value="register" onclick="disp()">register</button>
+            <br>
+            <h3 id="demo"></h3>
+            </form>
+    </body>
+</html>

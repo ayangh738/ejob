@@ -1,0 +1,39 @@
+<html>
+    <body>
+         name:
+        <input type="text" id="name" />
+        <br>    
+        physics marks:
+        <input type="number" id="phy" />
+        <br>
+        chemistry marks:    
+        <input type="number" id="chem" />
+        <br>
+        maths marks:
+        <input type="number" id="math" />
+        <br>
+        department:
+        <select id="dept">
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="eee">EEE</option>
+            <option value="civil">Civil</option>
+            <option value="mech">Mech</option>
+        </select>
+        <input type="button" id="btn" value="check" />
+        <script>
+            var bt=document.getElementById("btn");
+            bt.addEventListener("click",()=>{
+                let name=document.getElementById("name").value;
+                let phy=document.getElementById("phy").value;
+                let chem=document.getElementById("chem").value;
+                let math=document.getElementById("math").value;
+                let dept=document.getElementById("dept").value;
+                alert(`name: ${name}, physics: ${phy}, chemistry: ${chem}, maths: ${math}, department: ${dept}, total: ${parseInt(phy)+parseInt(chem)+parseInt(math)}`);
+            })
+
+
+        </script>
+       
+    </body>
+</html>

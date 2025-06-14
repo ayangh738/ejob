@@ -1,0 +1,33 @@
+<html>
+    <body>
+
+        <script>
+            function calc()
+            {
+                var p=parseInt(document.test.pr.value);
+                var r=parseInt(document.test.rt.value);
+                var t=parseInt(document.test.tm.value);
+                var si= (p*r*t)/100;
+                var total=p+si;
+                document.getElementById("demo").innerHTML="principal "+p+"\nrate: "+r+"\ntime : "+t + "\nsimple int: " + si + "\ntotal amount: " + total;
+            }
+            </script>
+            <h3>calculator</h3>
+          <form name="test">
+            enter principal: <input type="number" name="pr"/>
+            <br>
+            enter rate: <input type="number" name="rt"/>
+            <br>
+            enter time: <input type= "number" name="tm">
+            <br>
+            <button type="button" value="calculate" onclick="calc()">calculate</button>
+            <br>
+            
+            </form>
+            <h3 id="demo"></h3>
+
+
+
+        
+    </body>
+</html>

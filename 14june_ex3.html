@@ -1,0 +1,19 @@
+<html>
+<body>
+    <script>
+        var calc=()=>{
+            let x=document.querySelector("#n1").value;
+            let f=1;
+            for(let i=1;i<=x;i++)
+        {f=f*i}
+        document.getElementById("sp1").innerHTML=`factorial is ${f}`;
+        }
+    </script>
+enter a number:
+<input type="number" id="n1"/>
+<br>
+<button onclick="calc()">calculate</button>
+<br>
+<span id="sp1"></span>
+</body>
+</html>
