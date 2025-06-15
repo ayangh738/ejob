@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+            var st1= "this is advance javasript class.we are from ejob."
+            document.writeln("length:"+st1.length+"<br>");
+            document.writeln(st1[3]+"<br>")
+            document.writeln(st1.slice(0,16)+"<br>");
+            document.writeln(st1.substring(5,25)+"<br>");
+            document.writeln(st1.substr(6,30)+"<br>");
+            var st2= "react is a good language.react is easy.react is fun";
+            document.writeln(st2.indexOf("good language")+"<br>");
+            document.writeln(st2.indexOf("easy")+"<br>");
+            document.writeln(st2.indexOf("python")+"<br>");
+            document.writeln(st2.lastIndexOf("react")+"<br>");
+            document.writeln(st2.indexOf("react",1)+"<br>");
+            document.writeln(st2.replace("good language","framework")+"<br>");
+            document.writeln(st2.replaceAll("react","php")+"<br>");
+            var s11="hi ";
+            var s12="  hello  ";
+            var s13="  welcome  ";
+            document.writeln(s11.concat(s12,s13)+"<br>");
+            var s14="     welcome to javascript      ";
+            document.writeln(s14.length+"<br>");
+            document.writeln(s14.trim().length+"<br>");
+            document.writeln(s14.trimRight().length+"<br>");
+            document.writeln(s14.trimLeft().length+"<br>");
+            document.writeln(s11.repeat(4)+"<br>");
+            document.writeln("ABCDEF".toLocaleLowerCase()+"<br>");
+            var s15="hi this is a react class is for today";
+            document.writeln(s15.startsWith("hello this")+"<br>");
+            document.writeln(s15.endsWith("for today")+"<br>");
+            let r1=s15.split(" ");
+            console.log(r1);
+            let r2=s15.split(" is ");
+            console.log(r2);
+        </script>
+    </body>
+</html>
