@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            function outer(val,msg)
+            { document.writeln(`<h3>${msg}</h3>`);
+                function inner()
+                {let f=1;
+                    for (let i=1;i<=val;i++)
+                {
+                    f=f*i;
+                }
+                document.writeln(`required factorial : ${f}`);
+                }
+                inner();
+                }
+            outer(6,"welcome to nested function concept");
+        </script>
+    </body>
+</html>
