@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            var test={
+                len:20,
+                bred:15
+            }
+            function calc(msg,hgt)
+            {console.log(msg);
+                return this.len*this.bred*hgt;
+            }
+            //call
+            var r1=calc.call(test,"call example",5);
+            document.writeln(`call :${r1} <br>`);
+            //apply
+            var r2=calc.apply(test,["apply example",10]);
+            document.writeln(`apply :${r2} <br>`);
+            //bind
+            var r3=calc.bind(test,"bind example",15);
+            document.writeln(`bind :${r3()} <br>`);
+        </script>
+    </body>
+</html>
