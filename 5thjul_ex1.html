@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+           var emp={
+            id:20,
+            nm:'John',
+            loc:'pune',
+            dept:'computer',
+           }
+           var dupemp={...emp,em:'sk123@gmail.com',ph:1234567890};
+           console.log(dupemp);
+           var emp2={skills:['java','js','python'], salary:50000};
+        var info={...emp,...emp2};
+        console.log(info);
+        </script>
+    </body>
+</html>

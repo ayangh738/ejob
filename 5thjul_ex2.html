@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            function employee(nm,ag,em) {
+                this.name = nm;
+                this.age = ag;
+                this.email = em;
+            }
+            employee.prototype={
+                gen:"male",
+                loc:'kolkata',
+                desig:'developer',
+                dept:'computer',
+
+
+            }
+            var emp1 = new employee("John", 30, "john@example.com");
+            var emp2 = new employee("Jane", 25, "jane@example.com");
+            var emp3 = new employee("Doe", 28, "doe@example.com");
+
+            console.log(emp1.loc);
+            console.log(emp2.desig);
+            console.log(emp3.dept);
+        </script>
+    </body>
+</html>
