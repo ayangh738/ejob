@@ -1,0 +1,87 @@
+<html>
+    <body>
+        <script>
+            var obj1=[
+                {
+                    stnm:"arghya",
+                    stid:101,
+                    maths:80,
+                    physics:90,
+                    chemistry:85,
+                    biology:75,
+                    department:"ECE",
+                    location:"Kolkata"
+                },
+                {
+                    stnm:"aditi",
+                    stid:102,
+                    maths:75,
+                    physics:80,
+                    chemistry:90,
+                    biology:70,
+                    department:"EEE",
+                    location:"Howrah"
+                },
+                {
+                    stnm:"suraj",
+                    stid:103,
+                    maths:90,
+                    physics:85,
+                    chemistry:80,
+                    biology:75,
+                    department:"ITE",
+                    location:"Maldah"
+                }
+            ];
+             function showDetails() {
+                    var department = document.getElementById("department").value;
+                    var location = document.getElementById("location").value;
+                    var student = obj1.find(s => s.department === department && s.location === location);
+                    if (student) {
+                        var details = "<h3>Student Details:</h3>";
+                        for (var i in student) {
+                            details += "<p><strong>" + i + ":</strong> " + student[i] + "</p>";
+                        }
+                        document.getElementById("studentDetails").innerHTML = details;
+                    }
+                }
+                 function calculateTotalMarks() {
+                    var department = document.getElementById("department").value;
+                    var location = document.getElementById("location").value;
+                    var student = obj1.find(s => s.department === department && s.location === location);
+                    if (student) {
+                        var totalMarks = student.maths + student.physics + student.chemistry + student.biology;
+                        document.getElementById("totalMarks").innerText = totalMarks;
+                    }
+                }
+        </script>
+        <form>
+                <label for="student">Select Student:</label>
+                <select id="department" name="department">
+                    <option value="ECE">ece</option>
+                    <option value="EEE">eee</option>
+                    <option value="ITE">ite</option>
+                </select>
+                <br><br>
+                <label for="student">Select Student:</label>
+                <select id="location" name="location">
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Howrah">Howrah</option>
+                    <option value="Maldah">Maldah</option>
+                </select>
+                <br><br>
+                <button type="button" onclick="showDetails()">Show Details</button>
+                <br><br>
+                <label for="totalMarks">Total Marks:</label>
+                <button type="button" onclick="calculateTotalMarks()">Calculate Total Marks</button>
+                <span id="totalMarks"></span>
+            </form>
+
+            <div id="studentDetails"></div>
+
+            <script>
+               
+            </script>
+
+    </body>
+</html>

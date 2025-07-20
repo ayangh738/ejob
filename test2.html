@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <script>
+            var arr=["sachin","sourav","rahul","sehwag","anil","virat","rohit","zaheer"];
+             function searchCricketer() {
+                var input = document.getElementById("searchInput").value.toLowerCase();
+                var results = arr.filter(function(name) {
+                    return name.toLowerCase().includes(input);
+                });
+                displayResults(results);
+            }
+
+            function displayResults(results) {
+                var container = document.getElementById("searchResults");
+                container.innerHTML = "";
+                if (results.length > 0) {
+                    var ul = document.createElement("ul");
+                    results.forEach(function(name) {
+                        var li = document.createElement("li");
+                        li.textContent = name;
+                        ul.appendChild(li);
+                    });
+                    container.appendChild(ul);
+                } else {
+                    container.textContent = "No results found.";
+                }
+            }
+        </script>
+        <h3>search cricketors name</h3>
+        <input type="text" id="searchInput" placeholder="Search for a cricketer...">
+        <button onclick="searchCricketer()">Search</button>
+        <div id="searchResults"></div>
+    </body>
+</html>

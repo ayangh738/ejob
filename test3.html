@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            var arr1=["hi","hello","hi","welcome","php","fine","java","php"];
+            function nonRepeating() {
+                var result = arr1.filter(function(item, index) {
+                    return arr1.indexOf(item) === index;
+                });
+                document.getElementById("result").innerHTML = result.join(", ");
+            }
+            
+        </script>
+        <h3>non-repeating values</h3>
+        <input type="button" id="btn1" value="click" onclick="nonRepeating()"/>
+        <div id="result"></div>
+       
+    </body>
+</html>
